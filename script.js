@@ -45,7 +45,7 @@ function animateExplosion(x, y, dx, dy) {
   let life = 30;
   function frame() {
     if (life <= 0) return;
-    ctx.fillStyle = "#ffffff";
+    ctx.fillStyle = "#ffffff"; // blanco
     ctx.font = "bold 16px Arial";
     ctx.fillText(message, x + dx * (30 - life), y + dy * (30 - life));
     life--;
