@@ -1,7 +1,7 @@
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
 let speed = 10;
-let message = "Te quiero y te extraño princesa";
+let message = "Te quiero";
 let color = "#ff69b4";
 
 canvas.width = window.innerWidth;
