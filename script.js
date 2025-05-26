@@ -78,3 +78,26 @@ function animate() {
 }
 
 animate();
+
+// Botón para activar audio
+const audio = document.getElementById('background-audio');
+const btn = document.getElementById('unmute-btn');
+
+btn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Pausar sonido";
+  } else {
+    audio.pause();
+    btn.textContent = "Escuchar sonido";
+  }
+});
+
+
+// Ajustar canvas si cambia el tamaño de ventana
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  columns = canvas.width / fontSize;
+  drops = Array.from({ length: columns }).fill(1);
+});
