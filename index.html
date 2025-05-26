@@ -2,17 +2,57 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Matrix Love</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .controls {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 20;
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 6px;
+    }
+    #unmute-btn {
+      position: fixed;
+      bottom: 50px;
+      left: 10px;
+      z-index: 20;
+      padding: 6px 12px;
+      background: #ff69b4;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #unmute-btn:hover {
+      background: #ff85c1;
+    }
+  </style>
 </head>
 <body>
   <div class="controls">
-    <label>Velocidad: <input type="range" min="1" max="30" value="10" id="speedControl"></label>
-    <label>Color: <input type="color" id="colorPicker" value="#ff69b4"></label>
-    <label>Texto: <input type="text" id="textInput" value="Te quiero y te extraño princesa 🤍"></label>
+    <label>Velocidad: <input type="range" min="1" max="30" value="10" id="speedControl"></label><br />
+    <label>Color: <input type="color" id="colorPicker" value="#ff69b4"></label><br />
+    <label>Texto: <input type="text" id="textInput" value="Te quiero y te extraño princesa"></label>
   </div>
+
   <canvas id="matrixCanvas"></canvas>
+
+  <!-- Sin autoplay, sin muted -->
+  <audio id="background-audio" src="piano song.mp3" loop></audio>
+  <button id="unmute-btn">Escuchar sonido</button>
+
   <script src="script.js"></script>
 </body>
-</html>
+</htm
